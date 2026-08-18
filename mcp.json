@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "wim-kb": {
+      "command": "node",
+      "args": ["/Users/jax/sources/WIM-Backoffice/mcp-kb-server/dist/main.js"],
+      "env": {
+        "WIM_API_URL": "http://localhost:8000",
+        "VAULT_TOKEN": "${VAULT_TOKEN}"
+      }
+    }
+  }
+}

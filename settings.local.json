@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(systemsetup -getremotelogin)",
+      "Bash(sudo -n true)"
+    ]
+  }
+}

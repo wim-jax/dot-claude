@@ -1,0 +1,42 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/block-git-push.sh",
+            "statusMessage": "git push 차단 규칙 검사 중"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "node /Users/jax/.claude/hud/omc-hud.mjs"
+  },
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": true,
+    "oh-my-claudecode@omc": true,
+    "andrej-karpathy-skills@karpathy-skills": true,
+    "smart-commit@wim-plugins": true,
+    "clangd-lsp@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "notion@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "wim-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "WIM-Corporation/claude-marketplace"
+      }
+    }
+  },
+  "language": "한국어",
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "medium",
+  "tui": "fullscreen",
+  "skipDangerousModePermissionPrompt": true
+}

@@ -1,0 +1,7 @@
+- [Workload Profile](workload-profile.md) — jax 평소 작업 부하(다중 IDE+컨테이너+세션), 장비/메모리 상담 시 참고
+- [Edge PC Gripper Setup](edge-pc-gripper-setup.md) — 192.168.0.187 미니PC의 DH AG 그리퍼 (COM3, Modbus-RTU 115200, 초기화 스크립트 위치)
+- [OPNSense Network Setup](opnsense-network-setup.md) — 사무실 OPNSense(192.168.0.1, i7/63GB) 방화벽·토폴로지·DNS 조치·모니터링 스택 상태, 네트워크 상담 시 참고
+- [Server Infra Docs Location](server-infra-docs-location.md) — 서버 관련 문서 정본은 구글 드라이브 공유 드라이브(인공지능로봇팀/인프라), 서버 문서 편집 시 그쪽 직접 수정
+- [GitHub Accounts](github-accounts.md) — gh 계정 2개(wim-jax 회사/jax-lee-02 개인), WIM 레포 "not found"면 wim-jax로 스위칭
+- [vSphere/vSAN Setup](vsphere-vsan-setup.md) — vCenter(192.168.1.45) 접속법(govc/pyvmomi, VSPHERE_USER/PASSWORD env)·vSAN OSA 스토리지 회수 작업·쿠버 불가침 원칙
+- [Harbor Registry Setup](harbor-registry-setup.md) — Harbor(harbor.wimcorp.dev) robot admin 접속·retention/GC 정책·registry PVC 160Gi 이관, 이미지 정리 상담 시 참고

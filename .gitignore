@@ -1,0 +1,31 @@
+# .claude 전역 설정 — allowlist 방식
+# 기본: 전부 무시하고, 버전관리할 설정 파일만 예외로 등록한다.
+# 시크릿(.credentials.json 등)과 런타임 로그(history/sessions/caches)는 절대 추적하지 않는다.
+
+/*
+
+# 추적할 설정 파일
+!/.gitignore
+!/CLAUDE.md
+!/RTK.md
+!/settings.json
+!/settings.local.json
+!/mcp.json
+!/.omc-config.json
+!/hooks/
+!/hud/
+
+# skills: 직접 만든 것만 (CF 플러그인 스킬 제외)
+!/skills/
+/skills/*
+!/skills/daily-works/
+!/skills/review-until-converged/
+!/skills/worktree-cleanup/
+!/skills/omc-learned/
+
+# memory: projects/-Users-jax/memory/ 만
+!/projects/
+/projects/*
+!/projects/-Users-jax/
+/projects/-Users-jax/*
+!/projects/-Users-jax/memory/
