@@ -78,6 +78,7 @@ Say "setup omc" or run `/oh-my-claudecode:omc-setup`.
 - **메인 계열 브랜치(`main`, `master`, `prod`, `production`, `develop`)는 절대 `git push`를 하지 말 것.** 메인 계열 푸시는 전부 사용자 몫이다. 푸시가 필요하면 푸시하지 말고 사용자에게 "이러이러한 커밋을 push하면 된다"고 알리기만 할 것.
 - **워크트리에서 판 서브브랜치(`feat/*`, `fix/*`, `chore/*` 등 작업 브랜치)는 push 해도 된다.** 별도 지시 없이 작업 브랜치를 원격에 push하고 PR까지 만들어도 된다. 단, 그 PR을 **메인 계열로 머지하는 것은 사용자**가 한다.
 - 정리: 커밋은 어디서나 가능, **작업 브랜치 push/PR 생성은 허용**, **메인 계열로의 push·머지만 사용자 전용**이다.
+- **예외 레포 — `~/.claude`(remote `wim-jax/dot-claude`, 이 전역 설정 백업 레포):** 이 레포는 사용자가 "룰 업데이트/설정 반영해라"고 할 때마다 내가 직접 `main`에 커밋하고 `git push` 하라고 위임한 곳이다. **메인 push 금지 규칙에서 제외** — 설정을 바꾸면 `git add -A && git commit && git push`까지 바로 진행한다(별도 승인 불필요). author는 항상 `jax@wimcorp.co.kr`.
 
 ### 참고 문서(레퍼런스) 선(先)커밋
 
