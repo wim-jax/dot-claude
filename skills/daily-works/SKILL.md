@@ -27,7 +27,7 @@ python3 ~/.claude/skills/daily-works/fetch.py <FROM> <TO> [REFRESH_TOKEN]
 주차(Mon~Sun)별로 나눈다. 최근 daily works는 `6/08 ~ 6/14`처럼 월~일 한 주 단위.
 
 ```
-- **Daily works_M/D ~ M/D**
+- Daily works_M/D ~ M/D
     - Mon.
         - [WIM-Backoffice]
             - <이니셔티브 단위 작업>
@@ -39,7 +39,8 @@ python3 ~/.claude/skills/daily-works/fetch.py <FROM> <TO> [REFRESH_TOKEN]
             - <...>
 ```
 
-- **요일만** 표기(Mon./Tue./…). 요일 뒤 날짜는 붙이지 않는다. 활동 없는 요일은 생략.
+- 볼드(`**`) 금지: 주차 헤더도 `- Daily works_M/D ~ M/D`로만 쓴다(전역 규칙).
+- 요일만 표기(Mon./Tue./…). 요일 뒤 날짜는 붙이지 않는다. 활동 없는 요일은 생략.
 - 요일 아래에 `[프로젝트]`로 묶고, 그 아래 작업 리스트를 중첩한다.
 
 ### 노션 반영
