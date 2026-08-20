@@ -33,6 +33,7 @@ is_protected() {
 is_exempt_repo() {
   local exempt_repos=(
     "/Users/jax/sources/wim_backoffice_app"
+    "/Users/jax/.claude"
   )
   local resolved_gitdir
   resolved_gitdir=$(cd "$gitdir" 2>/dev/null && git rev-parse --show-toplevel 2>/dev/null || true)
@@ -52,7 +53,7 @@ fi
 # ~ 확장 (eval 없이)
 case "$gitdir" in
   "~") gitdir="$HOME" ;;
-  "~/"*) gitdir="$HOME/${gitdir#~/}" ;;
+  "~/"*) gitdir="$HOME/${gitdir#\~/}" ;;
 esac
 
 # push 이후 인자만 추출, 셸 구분자 전까지
