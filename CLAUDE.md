@@ -143,7 +143,7 @@ Say "setup omc" or run `/oh-my-claudecode:omc-setup`.
 ## 파일 경로 보고 방식
 
 - **사용자에게 파일 위치를 알릴 때는 메인 레포 루트 기준 상대 경로를 쓰되, 워크트리 안의 파일이면 워크트리 prefix(`.worktrees/<branch>/...`)를 포함한다.** 절대 경로(`/Users/...`)도, 워크트리 prefix가 빠진 레포 상대 경로(`docs/plans/...`)도 아니다. prefix가 빠지면 사용자가 워크트리 폴더를 직접 찾아 들어가야 해서 불편하다.
-- 예: `docs/plans/2026-07-30-x.md` (X, prefix 빠짐) / `/Users/jax/sources/mando-hsr-sdk/.worktrees/feat/foo/docs/plans/2026-07-30-x.md` (X, 절대경로) → `.worktrees/feat/foo/docs/plans/2026-07-30-x.md` (O).
+- 예: `docs/plans/2026-07-30-x.md` (X, prefix 빠짐) / `/Users/jax/workspace/out-sourcing/mando-hsr-sdk/.worktrees/feat/foo/docs/plans/2026-07-30-x.md` (X, 절대경로) → `.worktrees/feat/foo/docs/plans/2026-07-30-x.md` (O).
 - 커밋 메시지·diff·코드 내 참조 등은 종전대로(해당 워크트리 기준 경로). 이 규칙은 **사용자가 열어보라고 안내하는 경로**에만 적용된다.
 
 ## 1패스 품질 (반복 루프 비용 줄이기)
