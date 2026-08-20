@@ -116,6 +116,15 @@ Say "setup omc" or run `/oh-my-claudecode:omc-setup`.
 - 이유: 작업 브랜치는 "제안된 변경"만 담아야 PR diff가 리뷰 가능하다. 메인 상태를 브랜치로 끌어오면 남의 변경이 diff에 섞여 PR이 읽히지 않고, 같은 충돌을 브랜치마다 반복 해소하게 된다.
 - 메인 push/머지는 여전히 사용자 몫이다. 충돌이 있으면 **로컬에서 메인 쪽 머지를 준비해 충돌만 풀어두고, 사용자에게 "이 머지를 push/PR 머지하면 된다"고 알린다.** 에이전트가 메인에 push하지 않는다.
 - 이미 브랜치에 역방향 머지 커밋을 만들어 push했다면, 되돌리는 force-push는 **사용자 확인을 받고** 진행한다.
+- **PR을 로컬에서 머지할 때 커밋 메시지는 GitHub 머지 커밋 포맷과 동일하게** 만든다. 제목은 `Merge pull request #<번호> from <owner>/<브랜치>`, 빈 줄, 그 다음 줄에 PR 제목. 충돌 해소 근거 등 부연은 그 아래 본문에 적는다. `--no-ff`로 머지 커밋을 반드시 남긴다(fast-forward 금지).
+  ```
+  Merge pull request #9 from WIM-Corporation/collector-interface-doc
+
+  docs(D49): 전달본 정리 + SSD 영속 저장 복원, MQTT publish 명확화
+
+  <충돌 해소 방식·채택 근거 등 부연>
+  ```
+  이유: 로컬 머지든 GitHub 버튼이든 히스토리 모양이 같아야 `git log`에서 PR 경계를 일관되게 읽을 수 있고, 어느 PR이 어디서 들어왔는지 추적된다.
 
 ### 브랜치 삭제 정책
 
